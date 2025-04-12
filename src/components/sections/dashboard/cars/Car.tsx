@@ -15,7 +15,7 @@ const Car = ({ car }: { car: ICar }) => {
         rowGap={1.375}
         component={Link}
         href="#!"
-        sx={(theme) => ({
+        sx={theme => ({
           p: theme.spacing(1.5, 3),
           color: 'common.black',
         })}

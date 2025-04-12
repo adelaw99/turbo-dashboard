@@ -30,7 +30,7 @@ const CarStatistics = () => {
 
   return (
     <Paper
-      sx={(theme) => ({
+      sx={theme => ({
         p: theme.spacing(1.875, 3, 1.25, 3),
       })}
     >

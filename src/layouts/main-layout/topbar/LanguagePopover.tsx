@@ -65,7 +65,7 @@ const LanguagePopover = () => {
         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
       >
-        {languageItems.map((languageItem) => (
+        {languageItems.map(languageItem => (
           <MenuItem
             key={languageItem.id}
             selected={languageItem.id === selectedIndex}

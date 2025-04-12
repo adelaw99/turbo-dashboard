@@ -21,7 +21,7 @@ const DrawerList = () => {
       </Toolbar>
 
       <Stack
-        sx={(theme) => ({
+        sx={theme => ({
           height: `calc(100vh - ${theme.mixins.toolbar.minHeight}px)`,
           p: theme.spacing(2, 3),
           justifyContent: 'space-between',
@@ -29,13 +29,13 @@ const DrawerList = () => {
         })}
       >
         <List sx={{ pt: 0 }}>
-          {drawerItems.slice(0, -2).map((drawerItem) => (
+          {drawerItems.slice(0, -2).map(drawerItem => (
             <DrawerListItem key={drawerItem.id} item={drawerItem} />
           ))}
         </List>
 
         <List>
-          {drawerItems.slice(-2).map((drawerItem) => (
+          {drawerItems.slice(-2).map(drawerItem => (
             <DrawerListItem key={drawerItem.id} item={drawerItem} />
           ))}
         </List>

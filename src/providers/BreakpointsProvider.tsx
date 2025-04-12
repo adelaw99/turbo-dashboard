@@ -14,17 +14,16 @@ export const BreakpointContext = createContext({} as BreakpointContextInterface)
 
 const BreakpointsProvider = ({ children }: PropsWithChildren) => {
   const [currentBreakpoint, setCurrentBreakpoint] = useState<Breakpoint>('xs');
-  const up = (key: Breakpoint | number) =>
-    useMediaQuery<Theme>((theme) => theme.breakpoints.up(key));
+  const up = (key: Breakpoint | number) => useMediaQuery<Theme>(theme => theme.breakpoints.up(key));
 
   const down = (key: Breakpoint | number) =>
-    useMediaQuery<Theme>((theme) => theme.breakpoints.down(key));
+    useMediaQuery<Theme>(theme => theme.breakpoints.down(key));
 
   const only = (key: Breakpoint | number) =>
-    useMediaQuery<Theme>((theme) => theme.breakpoints.only(key as Breakpoint));
+    useMediaQuery<Theme>(theme => theme.breakpoints.only(key as Breakpoint));
 
   const between = (start: Breakpoint | number, end: Breakpoint | number) =>
-    useMediaQuery<Theme>((theme) => theme.breakpoints.between(start, end));
+    useMediaQuery<Theme>(theme => theme.breakpoints.between(start, end));
 
   const isXs = between('xs', 'sm');
   const isSm = between('sm', 'md');

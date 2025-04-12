@@ -4,7 +4,7 @@ import scrollbar from 'theme/styles/scrollbar';
 import echart from 'theme/styles/echart';
 
 const CssBaseline: Components<Omit<Theme, 'components'>>['MuiCssBaseline'] = {
-  styleOverrides: (theme) => ({
+  styleOverrides: theme => ({
     body: {
       fontVariantLigatures: 'none',
       ...scrollbar(theme),

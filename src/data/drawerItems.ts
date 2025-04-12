@@ -47,7 +47,7 @@ export const drawerItems: DrawerItem[] = [
     title: 'Booking',
     path: '/bookings',
     collapsible: false,
-    active:true,
+    active: true,
   },
   {
     id: 5,

@@ -56,7 +56,7 @@ const AccountMenu = () => {
         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
       >
-        {menuItems.map((menuItem) => (
+        {menuItems.map(menuItem => (
           <MenuItem key={menuItem.id} onClick={handleClose}>
             <ListItemIcon>
               <IconifyIcon icon={menuItem.icon} />

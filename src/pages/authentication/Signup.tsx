@@ -29,7 +29,7 @@ const checkBoxLabel = { inputProps: { 'aria-label': 'Checkbox' } };
 
 const Signup = () => {
   const { register, handleSubmit } = useForm<SignUpFormValues>();
-  const onSubmit: SubmitHandler<SignUpFormValues> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<SignUpFormValues> = data => console.log(data);
 
   return (
     <Box sx={{ width: { xs: 1, sm: 506 }, px: { xs: 2, sm: 0 }, py: 10 }}>
@@ -72,7 +72,7 @@ const Signup = () => {
       <Divider>or</Divider>
 
       <Box component="form" onSubmit={handleSubmit(onSubmit)}>
-        <Paper sx={(theme) => ({ padding: theme.spacing(2.5), my: 3, boxShadow: 1 })}>
+        <Paper sx={theme => ({ padding: theme.spacing(2.5), my: 3, boxShadow: 1 })}>
           <Grid container spacing={2.5}>
             <Grid item xs={12}>
               <InputLabel htmlFor="firstName">First Name</InputLabel>

@@ -8,7 +8,7 @@ const App = lazy(() => import('App'));
 const MainLayout = lazy(() => import('layouts/main-layout'));
 const AuthLayout = lazy(() => import('layouts/auth-layout'));
 const Dashboard = lazy(() => import('pages/dashboard/Dashboard'));
-const Bookings = lazy(()=> import('pages/booking/Booking'))
+const Bookings = lazy(() => import('pages/booking/Bookings'));
 const Login = lazy(() => import('pages/authentication/Login'));
 const Signup = lazy(() => import('pages/authentication/Signup'));
 const ErrorPage = lazy(() => import('pages/errors/ErrorPage'));
@@ -36,7 +36,7 @@ const routes = [
             element: <Dashboard />,
           },
           {
-            path: "bookings",
+            path: 'bookings',
             element: <Bookings />,
           },
         ],

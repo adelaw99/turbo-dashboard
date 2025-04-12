@@ -25,7 +25,7 @@ const ReactEchart = forwardRef<null | EChartsReactCore, ReactEchartProps>(
         {...rest}
       />
     );
-  },
+  }
 );
 
 export default ReactEchart;

@@ -13,7 +13,7 @@ const CollapsedItems = ({ subItems, open }: CollapsedItemProps) => {
   return (
     <Collapse in={open} timeout="auto" unmountOnExit>
       <List component="div" disablePadding>
-        {subItems?.map((subItem) => (
+        {subItems?.map(subItem => (
           <ListItemButton
             key={subItem.id}
             selected={location.pathname === subItem.path}

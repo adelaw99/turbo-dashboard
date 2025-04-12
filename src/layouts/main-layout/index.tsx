@@ -35,7 +35,7 @@ const MainLayout = ({ children }: PropsWithChildren) => {
       />
       <Box
         component="main"
-        sx={(theme) => ({
+        sx={theme => ({
           flexGrow: 1,
           p: { xs: theme.spacing(3.75, 3), md: theme.spacing(3.75, 5.375, 3.75, 3.75) },
           minHeight: '100vh',

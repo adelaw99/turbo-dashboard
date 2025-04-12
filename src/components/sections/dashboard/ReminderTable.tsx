@@ -10,7 +10,7 @@ const ReminderTable = () => {
 
   return (
     <Paper
-      sx={(theme) => ({
+      sx={theme => ({
         p: theme.spacing(2, 2.5),
         width: 1,
       })}
@@ -30,7 +30,7 @@ const ReminderTable = () => {
         <Button
           variant="contained"
           color="secondary"
-          sx={(theme) => ({
+          sx={theme => ({
             p: theme.spacing(0.625, 1.5),
             borderRadius: 1.5,
           })}

@@ -14,5 +14,5 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <RouterProvider router={router} />
       </BreakpointsProvider>
     </ThemeProvider>
-  </React.StrictMode>,
+  </React.StrictMode>
 );

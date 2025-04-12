@@ -5,7 +5,7 @@ import { Link as RouterLink, LinkProps as RouterLinkProps } from 'react-router-d
 
 // eslint-disable-next-line
 const LinkBehavior = forwardRef<any, Omit<RouterLinkProps, 'to'> & { href?: string }>(
-  (props, ref) => <RouterLink ref={ref} to={props.href || ''} {...props} />,
+  (props, ref) => <RouterLink ref={ref} to={props.href || ''} {...props} />
 );
 
 const Link: Components<Omit<Theme, 'components'>>['MuiLink'] = {
