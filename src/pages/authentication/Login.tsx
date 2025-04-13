@@ -31,7 +31,7 @@ const Login = () => {
 
   return (
     <Box sx={{ width: { xs: 1, sm: 506 }, px: { xs: 2, sm: 0 }, py: 10 }}>
-      <Typography variant="h1">Get's started.</Typography>
+      <Typography variant="h1">Get&apos;s started.</Typography>
       <Typography
         variant="subtitle1"
         component="p"

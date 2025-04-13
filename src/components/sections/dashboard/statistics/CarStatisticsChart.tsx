@@ -22,7 +22,7 @@ interface ChartProps {
   };
 }
 
-const CarStatisticsChart = ({ areaChartRef, data, style }: ChartProps) => {
+const CarStatisticsChart = ({ areaChartRef, style }: ChartProps) => {
   const theme = useTheme();
 
   const chartOption = useMemo(() => {
@@ -123,7 +123,7 @@ const CarStatisticsChart = ({ areaChartRef, data, style }: ChartProps) => {
       ],
     };
     return areaChartOption;
-  }, [data, theme]);
+  }, [theme]);
 
   return <ReactEchart echarts={echarts} option={chartOption} ref={areaChartRef} style={style} />;
 };

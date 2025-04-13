@@ -29,4 +29,6 @@ const PasswordTextField = forwardRef<HTMLDivElement, TextFieldProps>((props, ref
   );
 });
 
+PasswordTextField.displayName = 'PasswordTextField';
+
 export default PasswordTextField;

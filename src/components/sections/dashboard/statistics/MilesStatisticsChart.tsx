@@ -20,7 +20,7 @@ interface ChartProps {
   };
 }
 
-const MilesStatisticsChart = ({ barChartRef, data, style }: ChartProps) => {
+const MilesStatisticsChart = ({ barChartRef, style }: ChartProps) => {
   const theme = useTheme();
 
   const getBarChartOption = useMemo(() => {
@@ -110,7 +110,7 @@ const MilesStatisticsChart = ({ barChartRef, data, style }: ChartProps) => {
     };
 
     return barChartOption;
-  }, [data]);
+  }, [theme]);
 
   return (
     <ReactEchart echarts={echarts} option={getBarChartOption} ref={barChartRef} style={style} />

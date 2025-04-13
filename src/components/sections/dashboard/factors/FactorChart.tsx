@@ -65,7 +65,7 @@ const FactorChart = ({ data: doughnutChartData, isHovered, style }: ChartProps) 
     };
 
     return doughnutChartOption;
-  }, [theme, isHovered]);
+  }, [theme, isHovered, color, value, max]);
 
   return <ReactEchart echarts={echarts} option={getDoughnutChartOption} style={style} />;
 };
