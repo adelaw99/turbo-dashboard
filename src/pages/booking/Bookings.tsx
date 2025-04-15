@@ -1,12 +1,26 @@
 import { Button, Paper, Stack, Typography } from '@mui/material';
+import { useGridApiRef } from '@mui/x-data-grid';
 import IconifyIcon from 'components/base/IconifyIcon';
+import CustomPagination from 'components/common/CustomPagination';
 import BookingTable from 'components/sections/booking/bookingTable';
-// import SearchFilter from "components/common/SearchFilter"
+import SearchFilter from 'components/common/SearchFilter';
 
 const Bookings = () => {
+  const apiRef = useGridApiRef();
+
   return (
-    <Paper>
-      <Stack direction={'row'} alignItems="center" justifyContent="space-between" spacing={2}>
+    <Paper
+      sx={theme => ({
+        p: theme.spacing(2, 2.5),
+        width: 1,
+      })}
+    >
+      <Stack
+        direction={'row'}
+        alignItems="center"
+        justifyContent="space-between"
+        sx={{ mt: 2, mb: 4 }}
+      >
         <Typography variant="h5" color="common.black">
           Recent Bookings
         </Typography>
@@ -22,7 +36,7 @@ const Bookings = () => {
           >
             <Typography variant="body2">Filter</Typography>
           </Button>
-          {/* <SearchFilter apiRef={}/> */}
+          <SearchFilter apiRef={apiRef} />
           <Button
             variant="contained"
             color="secondary"
@@ -36,7 +50,8 @@ const Bookings = () => {
           </Button>
         </Stack>
       </Stack>
-      <BookingTable />
+      <BookingTable apiRef={apiRef} />
+      <CustomPagination apiRef={apiRef} />
     </Paper>
   );
 };
