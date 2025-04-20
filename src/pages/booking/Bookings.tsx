@@ -25,18 +25,19 @@ const Bookings = () => {
           Recent Bookings
         </Typography>
 
-        <Stack direction={'row'}>
+        <Stack direction={'row'} spacing={2} sx={{ mb: 2 }}>
+          <SearchFilter apiRef={apiRef} />
           <Button
             variant="contained"
             sx={theme => ({
               p: theme.spacing(0.625, 1.5),
               borderRadius: 1.5,
             })}
-            startIcon={<IconifyIcon icon="heroicons:adjustments-horizontal-16-solid" />}
+            startIcon={<IconifyIcon icon="heroicons:funnel" />}
           >
-            <Typography variant="body2">Filter</Typography>
+            <Typography variant="body2">Status</Typography>
           </Button>
-          <SearchFilter apiRef={apiRef} />
+
           <Button
             variant="contained"
             color="secondary"
@@ -44,6 +45,7 @@ const Bookings = () => {
               p: theme.spacing(0.625, 1.5),
               borderRadius: 1.5,
             })}
+            onClick={() => apiRef.current.exportDataAsCsv()}
             endIcon={<IconifyIcon icon="heroicons:arrow-down-tray-20-solid" />}
           >
             <Typography variant="body2">Export</Typography>
